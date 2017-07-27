@@ -2,9 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
-import static java.lang.Short.parseShort;
-
 public class Fibonacci {
     List<Integer> fibonacci = new ArrayList<Integer>();
     int listLength;
@@ -31,7 +28,7 @@ public class Fibonacci {
 
         System.out.println("How long a Fibonacci sequence: ");
         Scanner lengthScanner = new Scanner(System.in);
-        listLength = parseInt(lengthScanner.nextLine());
+        listLength = lengthScanner.nextInt();
     }
 
     //Ask for starting value of sequence
@@ -39,7 +36,7 @@ public class Fibonacci {
 
         System.out.println("Starting from 0 or 1: ");
         Scanner startScanner = new Scanner(System.in);
-        fibonacciStartValues(parseShort(startScanner.nextLine()));
+        fibonacciStartValues(startScanner.nextShort());
     }
 
     //Initial values
